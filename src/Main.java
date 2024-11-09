@@ -21,6 +21,7 @@ public class Main {
                 return i;
             }
         }
+        System.out.println("Steps: " + steps);
         return -1;
     }
 
