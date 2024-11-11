@@ -9,20 +9,15 @@ public class Main {
         }
         System.out.println();
 
-        int min = -1;
-        int temp =  0;
+        for (int i = 0; i < nums.length; i++) {
+            int key = nums[i];
+            int j = i - 1;
 
-
-        for (int i = 0; i < nums.length-1; i++) {
-            min = i;
-            for (int j = i + 1; j < nums.length ; j++) {
-                if (nums[min] > nums[j] ){
-                    min = j;
-                }
+            while (j >= 0 && nums[j] > key) {
+                nums[j + 1] = nums[j];
+                j--;
             }
-            temp =  nums[min];
-            nums[min] =  nums[i];
-            nums[i] = temp;
+            nums[j + 1] = key;
         }
 
         System.out.println("After");
