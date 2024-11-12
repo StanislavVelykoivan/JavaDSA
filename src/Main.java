@@ -1,31 +1,21 @@
+
 public class Main {
     public static void main(String[] args) {
+        Queue queue = new Queue();
 
-        int[] nums = {6, 5, 2, 8, 9, 4};
+        queue.enqueue(8);
+        queue.enqueue(45);
 
-        System.out.println("Befor");
-        for (int num : nums) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
+        queue.enqueue(23);
+        queue.enqueue(73);
 
-        int temp = 0;
+        System.out.println(queue.dequeue() + " - deleted");
 
-        for (int i = 0; i < nums.length; i++) {
 
-            for (int j = 0; j < nums.length - i - 1; j++) {
-                if (nums[j] > nums[j + 1]) {
-                    temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
-                }
-            }
 
-        }
+        queue.enqueue(63);
 
-        System.out.println("After");
-        for (int num : nums) {
-            System.out.print(num + " ");
-        }
+        System.out.println(queue.peek() + " - peek");
+
     }
 }
