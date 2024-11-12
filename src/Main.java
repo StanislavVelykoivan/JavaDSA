@@ -1,21 +1,17 @@
 
 public class Main {
     public static void main(String[] args) {
-        Queue queue = new Queue();
+        BinaryTree tree = new BinaryTree();
 
-        queue.enqueue(8);
-        queue.enqueue(45);
+        tree.insert(8);
+        tree.insert(7);
+        tree.insert(12);
+        tree.insert(15);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(9);
 
-        queue.enqueue(23);
-        queue.enqueue(73);
-
-        System.out.println(queue.dequeue() + " - deleted");
-
-
-
-        queue.enqueue(63);
-
-        System.out.println(queue.peek() + " - peek");
+        tree.inorder();
 
     }
 }
